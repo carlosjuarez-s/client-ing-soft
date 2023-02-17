@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import './CrearModelo.css'
 
 function CrearModelo() {
   const [modelo, setModelo] = useState("");
@@ -7,6 +8,7 @@ function CrearModelo() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    console.log(e.target);
     try {
       const response = await axios.post("", {
         modelo: modelo,
